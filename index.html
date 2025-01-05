@@ -4,54 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yulu Desserts</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #fff5f7;
-            color: #333;
-        }
-        h1 {
-            color: #d75a70;
-        }
-        .desserts {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .dessert {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 10px;
-            background-color: #fff;
-            width: 200px;
-        }
-        img {
-            width: 100%;
-            border-radius: 8px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>Welcome to Yulu Desserts!</h1>
-    <p>Discover our delicious treats:</p>
-    <div class="desserts">
-        <div class="dessert">
-            <img src="https://via.placeholder.com/200" alt="Strawberry Cake">
-            <h3>草莓蛋糕</h3>
-            <p>清新香甜的草莓搭配松软戚风蛋糕。</p>
-        </div>
-        <div class="dessert">
-            <img src="https://via.placeholder.com/200" alt="Cheesecake">
-            <h3>乳酪蛋糕</h3>
-            <p>浓郁奶香，口感细腻的经典乳酪蛋糕。</p>
-        </div>
-        <div class="dessert">
-            <img src="https://via.placeholder.com/200" alt="Chocolate Ganache">
-            <h3>君度酒巧克力甘纳许</h3>
-            <p>黑巧克力与君度酒的完美结合。</p>
+<body style="background-color: #e6f7ff;">
+    <div class="hero-banner">
+        <img src="banner-image.jpg" alt="Delicious Desserts" />
+        <div class="hero-text">
+            <h1>歡迎來到雨鹿甜點工作室</h1>
+            <button onclick="window.open('https://www.instagram.com/raindeer_dessert_/', '_blank')">關注我們的 Instagram！</button>
         </div>
     </div>
+
+    <div class="instagram-feed">
+        <h2>我們的 Instagram 動態</h2>
+        <iframe 
+            src="https://www.instagram.com/raindeer_dessert_/embed" 
+            width="100%" 
+            height="500" 
+            frameborder="0" 
+            scrolling="no" 
+            allowtransparency="true">
+        </iframe>
+    </div>
+
+    <h1>目前提供的商品</h1>
+    <p>我們提供各式各樣的甜點，讓你的生活更甜蜜。</p>
+    <div class="products">
+        <div class="product">
+            <img src="images/strawberry cake.jpg" alt="Strawberry Cake">
+            <h2>草莓蛋糕</h2>
+            <p>清新香甜的草莓搭配鬆軟戚風蛋糕。</p>
+        </div>
+        <div class="product">
+            <img src="images/cheesecake.jpg" alt="Cheesecake">
+            <h2>乳酪蛋糕</h2>
+            <p>濃鬱奶香，口感細緻的經典乳酪蛋糕。</p>
+        </div>
+        <div class="product">
+            <img src="images/chocolate.jpg" alt="Chocolate Ganache">
+            <h2>君度酒巧克力甘納許</h2>
+            <p>黑巧克力與君度酒的完美結合，巧克力很濃有點軟軟的而且很香很好吃。</p>
+        </div>
+    </div>
+
+    <div id="popup" style="display: none; position: fixed; top: 30%; left: 50%; transform: translate(-50%, -50%); padding: 20px; background-color: #FFF5E1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; border-radius: 10px;">
+        <h2>別錯過甜蜜瞬間！</h2>
+        <p>立即關注我們的 Instagram，獲取最新甜點資訊和優惠！</p>
+        <button onclick="window.open('https://www.instagram.com/raindeer_dessert_/', '_blank')">立即關注</button>
+        <button onclick="document.getElementById('popup').style.display='none'">關閉</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 雨鹿甜點工作室. All Rights Reserved. | <a href="#">隱私政策</a></p>
+    </footer>
+
+    <script>
+        setTimeout(() => {
+            document.getElementById('popup').style.display = 'block';
+        }, 60000); // 1分鐘後彈出
+    </script>
 </body>
 </html>
+
